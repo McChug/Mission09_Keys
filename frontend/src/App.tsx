@@ -17,13 +17,15 @@ function TeamCard({
   state: string;
 }) {
   return (
-    <>
-      <h2>{school}</h2>
-      <p>The {name}</p>
-      <p>
-        {city}, {state}
-      </p>
-    </>
+    <div className="bball-card">
+      <h2 className="bball-card-school">{school}</h2>
+      <div className="bball-inside">
+        <p>The {name}</p>
+        <p>
+          {city}, {state}
+        </p>
+      </div>
+    </div>
   );
 }
 
@@ -47,7 +49,9 @@ function App() {
   return (
     <>
       <Heading />
-      <TeamCardList />
+      <div className="bball-cards">
+        <TeamCardList />
+      </div>
     </>
   );
 }
